@@ -17,15 +17,15 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("h");
+                    //code goes here
                     break;
                 case 2:
-                    System.out.println("hi");
+                    //code goes here
                     break;
                 case 3:
                     System.out.println("Thank you for using our service!");
                     sc.close();
-                    return;
+                    return; // return exits the switch and the function that is running the switch loop
                     
                 default:
                     System.out.println("Enter a valid choice.");
