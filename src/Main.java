@@ -24,16 +24,12 @@ public class Main {
                     sc.nextLine();
                     System.out.println("Enter the title: ");
                     String title = sc.nextLine();
-                    sc.nextLine();
                     System.out.println("Enter the author: ");
                     String author = sc.nextLine();
-                    sc.nextLine();
                     System.out.println("Enter genre of the book: ");
                     String genre = sc.nextLine();
-                    sc.nextLine();
                     System.out.println("Enter the publisher: ");
                     String publisher = sc.nextLine();
-                    sc.nextLine();
                     Book book = new Book(bookId, title, author, genre, publisher);
                     library.addBook(book);
                     System.out.println("Book added successfully!");
