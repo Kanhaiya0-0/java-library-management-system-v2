@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import model.Book;
+import service.LibraryService;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,23 +20,23 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Enter the book id: ");
+                    System.out.print("Enter the book id: ");
                     int bookId = sc.nextInt();
                     sc.nextLine();
-                    System.out.println("Enter the title: ");
+                    System.out.print("Enter the title: ");
                     String title = sc.nextLine();
-                    System.out.println("Enter the author: ");
+                    System.out.print("Enter the author: ");
                     String author = sc.nextLine();
-                    System.out.println("Enter genre of the book: ");
+                    System.out.print("Enter genre of the book: ");
                     String genre = sc.nextLine();
-                    System.out.println("Enter the publisher: ");
+                    System.out.print("Enter the publisher: ");
                     String publisher = sc.nextLine();
                     Book book = new Book(bookId, title, author, genre, publisher);
                     library.addBook(book);
                     System.out.println("Book added successfully!");
                     break;
                 case 2:
-                    //code goes here
+                    library.displayBooks();
                     break;
                 case 3:
                     System.out.println("Thank you for using our service!");
