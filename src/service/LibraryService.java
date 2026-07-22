@@ -3,15 +3,13 @@ import java.util.ArrayList;
 
 public class LibraryService {
 
-    ArrayList<Book> books;
+    private ArrayList<Book> books;
 
-    public LibraryService(Book book) {
-        books.add
-        
+    public LibraryService() {
+        books = new ArrayList<>();
     }
 
     public void addBook(Book book) {
-        this.books=book;
+        books.add(book);
     }
-
 }
