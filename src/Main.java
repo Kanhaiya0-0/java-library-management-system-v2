@@ -12,7 +12,8 @@ public class Main {
             System.out.println("===== Library Management System =====");
             System.out.println("1. Add Book");
             System.out.println("2. Display Books");
-            System.out.println("3. Exit");
+            System.out.println("3. Search Book");
+            System.out.println("4. Exit");
             System.out.println("=====================================");
             System.out.println();
             System.out.print("Enter your choice: ");
@@ -39,11 +40,30 @@ public class Main {
                     library.displayBooks();
                     break;
                 case 3:
+                    System.out.print("Enter Book ID: ");    
+                    int BookId = sc.nextInt();
+                    sc.nextLine();
+                    Book foundBook = library.searchBook(BookId);
+                    if (foundBook == null) {
+                        System.out.println("Book not found.");
+                    } else {
+                        System.out.println("=====================================");
+                        System.out.println();
+                        System.out.println("BookId    : " + foundBook.getBookId());
+                        System.out.println("Title     : " + foundBook.getTitle());
+                        System.out.println("Author    : " + foundBook.getAuthor());
+                        System.out.println("Genre     : " + foundBook.getGenre());
+                        System.out.println("Publisher : " + foundBook.getPublisher());
+                        System.out.println("Status    : " + 
+                                            (foundBook.isAvailiable() ? "Availiable" : "Borrowed"));
+                        System.out.println();
+                        System.out.println("=====================================");
+                    }
+                    case 4:
                     System.out.println("Thank you for using our service!");
                     sc.close();
                     return; // return exits the switch and the function that is running the switch loop
-                    
-                default:
+                    default:
                     System.out.println("Enter a valid choice.");
             }         
         System.out.println();

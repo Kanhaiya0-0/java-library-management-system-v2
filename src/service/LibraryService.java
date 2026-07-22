@@ -24,14 +24,24 @@ public class LibraryService {
             for (Book book : books) {
             System.out.println("=====================================");
             System.out.println();
-            System.out.println("BookId: " + book.getBookId());
-            System.out.println("Title: " + book.getTitle());
-            System.out.println("Author: " + book.getAuthor());
-            System.out.println("Genre: " + book.getGenre());
-            System.out.println("Publisher: " + book.getPublisher());
-            System.out.println("Status: " + book.isAvailiable());
+            System.out.println("BookId    : " + book.getBookId());
+            System.out.println("Title     : " + book.getTitle());
+            System.out.println("Author    : " + book.getAuthor());
+            System.out.println("Genre     : " + book.getGenre());
+            System.out.println("Publisher : " + book.getPublisher());
+            System.out.println("Status    : " + book.isAvailiable());
             System.out.println();
             System.out.println("=====================================");
         }
     }
+    
+    public Book searchBook(int BookId) {
+
+        for (Book book : books) {
+            if (BookId == book.getBookId())
+            return book;    
+        }    
+    return null;
+    }
+    
 }
