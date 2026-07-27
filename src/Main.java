@@ -15,7 +15,7 @@ public class Main {
             System.out.println("3. Search Book");
             System.out.println("4. Borrow Book");
             System.out.println("5. Return Book");
-            System.out.println("6. Return Book");
+            System.out.println("6. Remove Book");
             System.out.println("7. Statistics");
             System.out.println("8. Exit");
             System.out.println("=====================================");
@@ -59,10 +59,11 @@ public class Main {
                         System.out.println("Genre     : " + foundBook.getGenre());
                         System.out.println("Publisher : " + foundBook.getPublisher());
                         System.out.println("Status    : " + 
-                                            (foundBook.isAvailable() ? "Availiable" : "Borrowed"));
+                                            (foundBook.isAvailable() ? "Available" : "Borrowed"));
                         System.out.println();
                         System.out.println("=====================================");
                     }
+                    break;
                 case 4:
                     System.out.print("Enter Book ID: ");    
                     int bookID = sc.nextInt();
@@ -76,6 +77,7 @@ public class Main {
                     else {
                         System.out.println("Book Unavailable");
                     }
+                    break;
                 case 5:
                     System.out.print("Enter Book ID: ");    
                     int bookiD = sc.nextInt();
@@ -89,6 +91,7 @@ public class Main {
                     else {
                         System.out.println("Book cannot be Returned");
                     }
+                    break;
                 case 6:
                     System.out.print("Enter Book ID: ");
                     int BookID = sc.nextInt();
@@ -101,6 +104,7 @@ public class Main {
                     } else {
                         System.out.println("Book not found.");
                     }
+                    break;
                 case 7:
                     library.statistics();
                 case 8:
