@@ -11,12 +11,7 @@
 - [ ] Search Book
 - [ ] Update Book
 - [ ] Remove Book
-- [ ] Member Management
-- [ ] Issue Book
-- [ ] Return Book
-- [ ] File Handling
-- [ ] Sorting
-- [ ] Final Polish
+- [ ] Statistics
 
 ---
 
