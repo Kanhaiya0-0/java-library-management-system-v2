@@ -14,7 +14,8 @@ public class Main {
             System.out.println("2. Display Books");
             System.out.println("3. Search Book");
             System.out.println("4. Borrow Book");
-            System.out.println("5. Exit");
+            System.out.println("5. Return Book");
+            System.out.println("6. Exit");
             System.out.println("=====================================");
             System.out.println();
             System.out.print("Enter your choice: ");
@@ -74,6 +75,19 @@ public class Main {
                         System.out.println("Book Unavailable");
                     }
                 case 5:
+                    System.out.print("Enter Book ID: ");    
+                    int bookiD = sc.nextInt();
+                    sc.nextLine();
+
+                    boolean returned = library.returnBook(bookiD);
+                    
+                    if (returned) {
+                        System.out.println("Book Returned Successfully!");
+                    }
+                    else {
+                        System.out.println("Book cannot be Returned");
+                    }
+                case 6:
                     System.out.println("Thank you for using our service!");
                     sc.close();
                     return; // return exits the switch and the function that is running the switch loop

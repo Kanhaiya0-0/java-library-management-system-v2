@@ -59,4 +59,21 @@ public class LibraryService {
         else
             return false;
     }
+
+    public boolean returnBook(int bookiD) {
+
+        Book book = searchBook(bookiD);
+
+        if (book == null) {
+            return false;
+        }
+        
+        if (!book.isAvailable()) {
+            book.setAvailable(true);
+            return true;
+        }
+
+        return false;
+    }
+    
 }
