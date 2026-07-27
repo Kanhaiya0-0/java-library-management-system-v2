@@ -34,4 +34,4 @@
 - Code reviews help catch logical and style issues before finalizing a project.
 
 ### 🎉 Project Status
-Library Management System v1.0 Completed ✅
+Library Management System v2.0 Completed ✅
