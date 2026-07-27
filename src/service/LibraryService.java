@@ -75,5 +75,16 @@ public class LibraryService {
 
         return false;
     }
-    
+
+    public boolean removeBook(int bookId) {
+
+        Book book = searchBook(bookId);
+
+        if (book == null) {
+            return false;
+        }
+
+        books.remove(book);
+        return true;
+    }
 }

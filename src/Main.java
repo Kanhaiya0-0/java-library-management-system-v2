@@ -7,7 +7,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         LibraryService library = new LibraryService();
-
+        
         while (true) {
             System.out.println("===== Library Management System =====");
             System.out.println("1. Add Book");
@@ -15,7 +15,8 @@ public class Main {
             System.out.println("3. Search Book");
             System.out.println("4. Borrow Book");
             System.out.println("5. Return Book");
-            System.out.println("6. Exit");
+            System.out.println("6. Return Book");
+            System.out.println("7. Exit");
             System.out.println("=====================================");
             System.out.println();
             System.out.print("Enter your choice: ");
@@ -88,6 +89,18 @@ public class Main {
                         System.out.println("Book cannot be Returned");
                     }
                 case 6:
+                    System.out.print("Enter Book ID: ");
+                    int BookID = sc.nextInt();
+                    sc.nextLine();
+
+                    boolean removed = library.removeBook(BookID);
+
+                    if (removed) {
+                        System.out.println("Book Removed Successfully!");
+                    } else {
+                        System.out.println("Book not found.");
+                    }
+                case 7:
                     System.out.println("Thank you for using our service!");
                     sc.close();
                     return; // return exits the switch and the function that is running the switch loop
