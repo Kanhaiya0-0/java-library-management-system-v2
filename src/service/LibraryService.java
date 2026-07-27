@@ -29,7 +29,7 @@ public class LibraryService {
             System.out.println("Author    : " + book.getAuthor());
             System.out.println("Genre     : " + book.getGenre());
             System.out.println("Publisher : " + book.getPublisher());
-            System.out.println("Status    : " + book.isAvailiable());
+            System.out.println("Status    : " + book.isAvailable());
             System.out.println();
             System.out.println("=====================================");
         }
@@ -44,4 +44,19 @@ public class LibraryService {
     return null;
     }
     
+    public boolean borrowBook(int BookId) {
+
+        Book book = searchBook(BookId);
+
+        if (book == null) {
+            return false;
+        }
+        
+        if (book.isAvailable() == true) {
+            book.setAvailable(false);
+            return true;
+        }    
+        else
+            return false;
+    }
 }

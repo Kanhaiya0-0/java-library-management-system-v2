@@ -7,15 +7,15 @@ public class Book {
     private String author;
     private String genre;
     private String publisher;
-    private boolean availiable;
-    
+    private boolean available;
+
     public Book(int bookId, String title, String author, String genre, String publisher) {
         this.bookId = bookId;
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.publisher = publisher;
-        this.availiable = true;
+        this.available = true;
     }
     
     public int getBookId() {
@@ -33,10 +33,12 @@ public class Book {
     public String getPublisher() {
         return publisher;
     }
-    public boolean isAvailiable() {
-        return availiable;
+    public boolean isAvailable() {
+        return available;
     }
 
-        
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
    
 }
