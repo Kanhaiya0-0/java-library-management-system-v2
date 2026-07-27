@@ -87,4 +87,23 @@ public class LibraryService {
         books.remove(book);
         return true;
     }
+
+    public void statistics() {
+        int availableCount = 0;
+        int borrowedCount = 0;
+
+        for (Book book : books) {
+            if (book.isAvailable()) {
+                availableCount++;
+            }
+            else {
+                borrowedCount++;
+            }
+        }
+        System.out.println("========== Library Statistics ==========");
+        System.out.println("Total Books      : " + books.size());
+        System.out.println("Available Books  : " + availableCount);
+        System.out.println("Borrowed Books   : " + borrowedCount);
+        System.out.println("========================================");
+    }
 }

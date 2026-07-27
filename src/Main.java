@@ -16,7 +16,8 @@ public class Main {
             System.out.println("4. Borrow Book");
             System.out.println("5. Return Book");
             System.out.println("6. Return Book");
-            System.out.println("7. Exit");
+            System.out.println("7. Statistics");
+            System.out.println("8. Exit");
             System.out.println("=====================================");
             System.out.println();
             System.out.print("Enter your choice: ");
@@ -101,6 +102,8 @@ public class Main {
                         System.out.println("Book not found.");
                     }
                 case 7:
+                    library.statistics();
+                case 8:
                     System.out.println("Thank you for using our service!");
                     sc.close();
                     return; // return exits the switch and the function that is running the switch loop
